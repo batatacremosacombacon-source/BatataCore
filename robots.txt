@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /html/inscritos.html
+Disallow: /html/minha-conta.html
+Sitemap: https://batata-core.vercel.app/sitemap.xml

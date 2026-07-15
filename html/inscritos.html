@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="noindex,nofollow" name="robots"/>
+<meta content="#12326b" name="theme-color"/>
+<title>Painel administrativo | BatataCore</title>
+<link href="../img/favicon.ico" rel="icon"/>
+<link href="../manifest.webmanifest" rel="manifest"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+<link href="../css/index.css" rel="stylesheet"/>
+<link href="../css/modern.css" rel="stylesheet"/>
+<link href="../css/admin.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="admin-shell" id="conteudo-principal">
+<aside class="admin-sidebar" id="adminSidebar">
+<a class="admin-logo" href="../index.html"><img alt="BatataCore" src="../img/batataescrita.png"/></a>
+<nav aria-label="Navegação administrativa" class="admin-nav">
+<button class="ativo" data-admin-tab="dashboard"><i class="bi bi-grid-1x2-fill"></i> Visão geral</button>
+<button data-admin-tab="eventos"><i class="bi bi-calendar-event-fill"></i> Eventos</button>
+<button data-admin-tab="inscricoes"><i class="bi bi-people-fill"></i> Inscrições</button>
+<button data-admin-tab="checkin"><i class="bi bi-qr-code-scan"></i> Check-in</button>
+<button data-admin-tab="contatos"><i class="bi bi-inbox-fill"></i> Contatos</button>
+</nav>
+<div class="admin-sidebar-footer">
+<a href="eventos.html"><i class="bi bi-box-arrow-up-right"></i> Ver site público</a>
+<button id="sairAdmin"><i class="bi bi-box-arrow-left"></i> Sair</button>
+</div>
+</aside>
+<div class="admin-main">
+<header class="admin-topbar">
+<div style="display:flex;align-items:center;gap:12px">
+<button aria-label="Abrir menu" class="admin-mobile-toggle" id="adminMobileToggle"><i class="bi bi-list"></i></button>
+<h1 id="adminPageTitle">Visão geral</h1>
+</div>
+<div class="admin-profile">
+<div class="admin-avatar" id="adminAvatar">A</div>
+<div><strong id="adminName">Administrador</strong><small id="adminRole" style="display:block;color:#69758a">Carregando...</small></div>
+</div>
+</header>
+<main class="admin-content">
+<div aria-live="polite" class="bc-alert" hidden="" id="adminFeedback" role="status"></div>
+<section class="admin-section" data-admin-panel="dashboard">
+<div class="admin-section-header"><div><h2>Resumo do BatataCore</h2><p>Indicadores atualizados com os dados do Supabase.</p></div><div class="bc-button-row"><button class="bc-button secondary" id="processarEmails"><i class="bi bi-send-check"></i> Processar e-mails</button><button class="bc-button" id="atualizarPainel"><i class="bi bi-arrow-clockwise"></i> Atualizar</button></div></div>
+<div class="admin-stats">
+<article class="admin-stat"><div class="admin-stat-icon"><i class="bi bi-people-fill"></i></div><div><strong id="statInscricoes">—</strong><span>Inscrições ativas</span></div></article>
+<article class="admin-stat"><div class="admin-stat-icon"><i class="bi bi-calendar-event"></i></div><div><strong id="statEventos">—</strong><span>Eventos publicados</span></div></article>
+<article class="admin-stat"><div class="admin-stat-icon"><i class="bi bi-qr-code-scan"></i></div><div><strong id="statCheckins">—</strong><span>Check-ins realizados</span></div></article>
+<article class="admin-stat"><div class="admin-stat-icon"><i class="bi bi-envelope-exclamation"></i></div><div><strong id="statContatos">—</strong><span>Contatos abertos</span></div></article>
+</div>
+<div class="admin-grid-2">
+<article class="admin-card"><h3>Inscrições por evento</h3><div class="admin-chart" id="eventosChart"><div class="bc-skeleton"></div></div></article>
+<article class="admin-card"><h3>Atividade recente</h3><div class="admin-activity" id="atividadeRecente"><div class="bc-skeleton"></div></div></article>
+</div>
+</section>
+<section class="admin-section" data-admin-panel="eventos" hidden="">
+<div class="admin-section-header"><div><h2>Gerenciar eventos</h2><p>Crie, edite, publique, cancele ou arquive eventos.</p></div><button class="bc-button" id="novoEvento"><i class="bi bi-plus-lg"></i> Novo evento</button></div>
+<div class="admin-card">
+<div class="admin-toolbar">
+<div class="admin-search"><i class="bi bi-search"></i><input id="pesquisaEventoAdmin" placeholder="Pesquisar eventos..." type="search"/></div>
+<select aria-label="Filtrar eventos por status" id="filtroStatusEvento"><option value="">Todos os status</option><option value="publicado">Publicado</option><option value="rascunho">Rascunho</option><option value="cancelado">Cancelado</option><option value="encerrado">Encerrado</option><option value="arquivado">Arquivado</option></select>
+</div>
+<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Evento</th><th>Data</th><th>Vagas</th><th>Status</th><th>Ações</th></tr></thead><tbody id="eventosAdminBody"></tbody></table></div>
+<div class="bc-empty" hidden="" id="eventosAdminEmpty"><i class="bi bi-calendar-x"></i>Nenhum evento encontrado.</div>
+</div>
+</section>
+<section class="admin-section" data-admin-panel="inscricoes" hidden="">
+<div class="admin-section-header"><div><h2>Inscrições</h2><p>Consulte participantes, status e ingressos.</p></div><button class="bc-button secondary" id="exportarInscricoes"><i class="bi bi-file-earmark-spreadsheet"></i> Exportar CSV</button></div>
+<div class="admin-card">
+<div class="admin-toolbar">
+<div class="admin-search"><i class="bi bi-search"></i><input id="pesquisaInscrito" placeholder="Nome, e-mail, cidade ou evento..." type="search"/></div>
+<select aria-label="Filtrar por status" id="filtroStatusInscricao"><option value="">Todos os status</option><option value="confirmado">Confirmado</option><option value="lista_espera">Lista de espera</option><option value="cancelado">Cancelado</option></select>
+</div>
+<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Participante</th><th>Evento</th><th>Tipo</th><th>Status</th><th>Check-in</th><th>Ações</th></tr></thead><tbody id="inscricoesAdminBody"></tbody></table></div>
+<div class="bc-empty" hidden="" id="inscricoesAdminEmpty"><i class="bi bi-person-x"></i>Nenhuma inscrição encontrada.</div>
+</div>
+</section>
+<section class="admin-section" data-admin-panel="checkin" hidden="">
+<div class="admin-section-header"><div><h2>Check-in de participantes</h2><p>Digite ou leia o código impresso no ingresso.</p></div></div>
+<article class="admin-card admin-checkin">
+<div class="admin-checkin-icon"><i class="bi bi-qr-code-scan"></i></div>
+<h3>Validar ingresso</h3><p>O sistema bloqueia ingressos cancelados e identifica check-ins repetidos.</p>
+<form class="admin-checkin-form" id="checkinForm"><input autocomplete="off" id="checkinCode" placeholder="Cole o código do ingresso" required="" type="text"/><button class="bc-button" type="submit"><i class="bi bi-check2-circle"></i> Confirmar</button></form>
+<div aria-live="polite" id="checkinResult" style="margin-top:20px"></div>
+</article>
+</section>
+<section class="admin-section" data-admin-panel="contatos" hidden="">
+<div class="admin-section-header"><div><h2>Central de contatos</h2><p>Acompanhe solicitações recebidas pelo formulário público.</p></div></div>
+<div class="admin-card">
+<div class="admin-toolbar"><div class="admin-search"><i class="bi bi-search"></i><input id="pesquisaContato" placeholder="Pesquisar contatos..." type="search"/></div><select id="filtroStatusContato"><option value="">Todos</option><option value="aberto">Aberto</option><option value="em_atendimento">Em atendimento</option><option value="resolvido">Resolvido</option><option value="arquivado">Arquivado</option></select></div>
+<div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Remetente</th><th>Assunto</th><th>Mensagem</th><th>Status</th><th>Ações</th></tr></thead><tbody id="contatosAdminBody"></tbody></table></div>
+<div class="bc-empty" hidden="" id="contatosAdminEmpty"><i class="bi bi-inbox"></i>Nenhum contato encontrado.</div>
+</div>
+</section>
+</main>
+</div>
+</div>
+<div aria-hidden="true" class="bc-modal" id="eventoModal"><div class="bc-modal-dialog"><div class="bc-modal-header"><h2 id="eventoModalTitle">Novo evento</h2><button aria-label="Fechar" class="bc-modal-close" data-close-modal="eventoModal"><i class="bi bi-x-lg"></i></button></div>
+<form class="bc-form" id="eventoForm">
+<input name="id" type="hidden"/>
+<div class="bc-grid bc-grid-2"><div class="bc-field"><label for="eventoNome">Nome</label><input id="eventoNome" minlength="4" name="nome" required=""/></div><div class="bc-field"><label for="eventoCategoria">Categoria</label><select id="eventoCategoria" name="categoria" required=""><option value="Workshop">Workshop</option><option value="Palestra">Palestra</option><option value="Hackathon">Hackathon</option><option value="Curso">Curso</option><option value="Encontro">Encontro</option></select></div></div>
+<div class="bc-grid bc-grid-2"><div class="bc-field"><label for="eventoData">Data</label><input id="eventoData" name="data_evento" required="" type="date"/></div><div class="bc-grid bc-grid-2"><div class="bc-field"><label for="eventoInicio">Início</label><input id="eventoInicio" name="hora_inicio" type="time"/></div><div class="bc-field"><label for="eventoFim">Fim</label><input id="eventoFim" name="hora_fim" type="time"/></div></div></div>
+<div class="bc-grid bc-grid-2"><div class="bc-field"><label for="eventoLocal">Local</label><input id="eventoLocal" name="local" required=""/></div><div class="bc-field"><label for="eventoFormato">Formato</label><select id="eventoFormato" name="formato"><option>Presencial</option><option>Online</option><option>Híbrido</option></select></div></div>
+<div class="bc-field"><label for="eventoEndereco">Endereço ou link</label><input id="eventoEndereco" name="endereco"/></div>
+<div class="bc-grid bc-grid-2"><div class="bc-field"><label for="eventoVagas">Vagas totais</label><input id="eventoVagas" min="1" name="vagas_total" required="" type="number"/></div><div class="bc-field"><label for="eventoStatus">Status</label><select id="eventoStatus" name="status"><option value="rascunho">Rascunho</option><option value="publicado">Publicado</option><option value="cancelado">Cancelado</option><option value="encerrado">Encerrado</option><option value="arquivado">Arquivado</option></select></div></div>
+<div class="bc-field"><label for="eventoImagem">URL da imagem</label><input id="eventoImagem" name="imagem_url" placeholder="https://..." type="url"/></div>
+<div class="bc-field"><label for="eventoDescricao">Descrição</label><textarea id="eventoDescricao" minlength="10" name="descricao" required=""></textarea></div>
+<div class="bc-grid bc-grid-2"><div class="bc-field"><label for="eventoCarga">Carga horária</label><input id="eventoCarga" min="0" name="carga_horaria" step="0.5" type="number"/></div><label class="bc-field inline" style="margin-top:28px"><input name="certificado_disponivel" type="checkbox"/><span>Certificado disponível para participantes com check-in</span></label></div>
+<div class="bc-button-row"><button class="bc-button" type="submit"><i class="bi bi-check-lg"></i> Salvar evento</button><button class="bc-button ghost" data-close-modal="eventoModal" type="button">Cancelar</button></div>
+</form></div></div>
+<div aria-hidden="true" class="bc-modal" id="detalheModal"><div class="bc-modal-dialog"><div class="bc-modal-header"><h2 id="detalheModalTitle">Detalhes</h2><button aria-label="Fechar" class="bc-modal-close" data-close-modal="detalheModal"><i class="bi bi-x-lg"></i></button></div><div id="detalheModalBody"></div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.6"></script>
+<script src="../js/supabase.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/inscritos.js"></script>
+</body>
+</html>

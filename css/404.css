@@ -1,0 +1,149 @@
+.erro404{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:linear-gradient(180deg,#FFF9F1,#FFF2E3);
+
+    padding:40px;
+
+}
+
+.mascote404{
+
+    position:relative;
+
+    margin-bottom:25px;
+
+}
+
+.mascote404 img{
+
+    width:220px;
+
+    animation:flutuar 3s ease-in-out infinite;
+
+}
+
+.lupa{
+
+    position:absolute;
+
+    right:-5px;
+
+    top:20px;
+
+    font-size:42px;
+
+    color:#12326B;
+
+    animation:procurar 1.3s infinite alternate;
+
+}
+
+.erro404 span{
+
+    background:#F58220;
+
+    color:#fff;
+
+    padding:8px 22px;
+
+    border-radius:30px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.procurando{
+
+    color:#F58220;
+
+    font-size:22px;
+
+    margin-bottom:15px;
+
+    animation:pulsar 1.4s infinite;
+
+}
+
+.erro404 h1{
+
+    font-size:72px;
+
+    color:#12326B;
+
+    margin-bottom:10px;
+
+}
+
+.erro404 h2{
+
+    font-size:34px;
+
+    color:#F58220;
+
+    margin-bottom:20px;
+
+}
+
+.erro404 p{
+
+    max-width:550px;
+
+    color:#666;
+
+    line-height:30px;
+
+    margin-bottom:40px;
+
+}
+
+@keyframes procurar{
+
+    0%{
+
+        transform:rotate(-18deg);
+
+    }
+
+    100%{
+
+        transform:rotate(18deg);
+
+    }
+
+}
+
+@keyframes pulsar{
+
+    0%{
+
+        opacity:.4;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.4;
+
+    }
+
+}

@@ -1,0 +1,511 @@
+/* ===========================
+   TEMA ESCURO - BATATACORE
+   Este arquivo deve ser carregado DEPOIS do CSS da página.
+=========================== */
+
+body.dark{
+    --bg:#121212;
+    --bg2:#1B1B1B;
+    --card:#242424;
+    --card2:#2E2E2E;
+    --texto:#F5F7FA;
+    --texto2:#C9C9C9;
+    --laranja:#F58220;
+    --azul:#12326B;
+    --borda:#3A3A3A;
+    --sombra:0 18px 45px rgba(0,0,0,.45);
+
+    background:var(--bg);
+    color:var(--texto);
+}
+
+/* ===========================
+   TEXTOS GERAIS
+=========================== */
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark .hero-texto h1,
+body.dark .card h3,
+body.dark .box h3,
+body.dark .feature h3,
+body.dark .step h3,
+body.dark .evento-info h3,
+body.dark .card-formulario h2,
+body.dark .grupo label,
+body.dark .campo label,
+body.dark .faq-pergunta,
+body.dark .pergunta h3,
+body.dark .topo-painel h2,
+body.dark .card-estatistica h2,
+body.dark tbody tr td:first-child,
+body.dark .modal-topo h2,
+body.dark .observacao h3,
+body.dark .painel-topo h3,
+body.dark .opcao-config span{
+    color:var(--texto);
+}
+
+body.dark p,
+body.dark .hero-texto p,
+body.dark .historia p,
+body.dark .box p,
+body.dark .card p,
+body.dark .feature p,
+body.dark .step p,
+body.dark .evento-info p,
+body.dark .detalhes span,
+body.dark .card-formulario > p,
+body.dark .card-estatistica p,
+body.dark .faq-item p,
+body.dark .pergunta p,
+body.dark .modal-info p,
+body.dark .observacao p,
+body.dark footer p,
+body.dark .assistente-box p,
+body.dark tbody td{
+    color:var(--texto2);
+}
+
+body.dark span,
+body.dark i,
+body.dark .hero-texto span,
+body.dark .card-estatistica i,
+body.dark .detalhes i,
+body.dark .categoria,
+body.dark .modal-topo span,
+body.dark tbody tr td:nth-child(2){
+    color:var(--laranja);
+}
+
+/* ===========================
+   HEADER E MENU
+=========================== */
+
+body.dark nav a{
+    color:var(--texto);
+}
+
+body.dark nav a:hover,
+body.dark nav .ativo{
+    color:var(--laranja);
+}
+
+body.dark header.rolagem{
+    background:rgba(18,18,18,.9);
+    backdrop-filter:blur(12px);
+}
+
+/* ===========================
+   FUNDOS PRINCIPAIS
+=========================== */
+
+body.dark .hero,
+body.dark .hero-formulario,
+body.dark .painel-hero,
+body.dark .banner-sobre,
+body.dark .erro404{
+    background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);
+}
+
+body.dark .banner-recursos,
+body.dark .banner-eventos,
+body.dark .banner-contato,
+body.dark .cta,
+body.dark .numeros{
+    background:linear-gradient(135deg,#0E2248,#162F63);
+}
+
+body.dark .funcionalidades,
+body.dark .processo,
+body.dark .lista-eventos,
+body.dark section.formulario,
+body.dark .contato,
+body.dark .faq,
+body.dark .mvv,
+body.dark .painel,
+body.dark .como-funciona,
+body.dark .diferenciais,
+body.dark .estatisticas{
+    background:var(--bg);
+}
+
+body.dark .cta-recursos,
+body.dark .cta-eventos{
+    background:linear-gradient(135deg,#C86412,#F58220);
+}
+
+body.dark .hero::before,
+body.dark .banner-sobre::before,
+body.dark .banner-sobre::after{
+    opacity:.12;
+}
+
+/* ===========================
+   CARDS E CAIXAS
+=========================== */
+
+body.dark .recursos .container,
+body.dark .card,
+body.dark .box,
+body.dark .feature,
+body.dark .evento-card,
+body.dark .card-formulario,
+body.dark .contato .formulario,
+body.dark .faq-item,
+body.dark .pergunta,
+body.dark .passo,
+body.dark .card-estatistica,
+body.dark .tabela,
+body.dark .modal-box,
+body.dark .assistente-box,
+body.dark .painel-config,
+body.dark .toast,
+body.dark .pesquisa,
+body.dark .pesquisa-eventos{
+    background:var(--card);
+    color:var(--texto);
+    box-shadow:var(--sombra);
+    border-color:var(--borda);
+}
+
+body.dark .card:hover,
+body.dark .box:hover,
+body.dark .feature:hover,
+body.dark .evento-card:hover,
+body.dark .faq-item:hover,
+body.dark .pergunta:hover,
+body.dark .passo:hover{
+    background:#2A2A2A;
+}
+
+body.dark .card:not(:last-child),
+body.dark .painel-topo,
+body.dark .opcao-config,
+body.dark tbody td{
+    border-color:var(--borda);
+}
+
+body.dark .icone,
+body.dark .feature .icon,
+body.dark .tag,
+body.dark .categoria,
+body.dark .painel-hero .tag,
+body.dark .avatar,
+body.dark .modal-info div,
+body.dark .observacao,
+body.dark .eventos-disponiveis{
+    background:#33271D;
+}
+
+body.dark .eventos-disponiveis{
+    border:1px solid var(--borda);
+}
+
+/* ===========================
+   FORMULÁRIOS, PESQUISAS E INPUTS
+=========================== */
+
+body.dark input,
+body.dark select,
+body.dark textarea,
+body.dark .grupo input,
+body.dark .grupo select,
+body.dark .grupo textarea,
+body.dark .campo input,
+body.dark .campo textarea,
+body.dark .pesquisa input,
+body.dark .pesquisa-eventos input{
+    background:var(--card2);
+    color:var(--texto);
+    border-color:var(--borda);
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder{
+    color:#8F8F8F;
+}
+
+body.dark input:focus,
+body.dark select:focus,
+body.dark textarea:focus,
+body.dark .grupo input:focus,
+body.dark .grupo select:focus,
+body.dark .grupo textarea:focus,
+body.dark .campo input:focus,
+body.dark .campo textarea:focus{
+    border-color:var(--laranja);
+    box-shadow:0 0 0 5px rgba(245,130,32,.18);
+}
+
+/* ===========================
+   BOTÕES
+=========================== */
+
+body.dark .btn-secundario{
+    background:var(--card);
+    color:var(--texto);
+    border:1px solid var(--borda);
+}
+
+body.dark .btn-principal,
+body.dark .btn-menu,
+body.dark .btn-evento,
+body.dark .formulario button,
+body.dark .novo-evento,
+body.dark .btn-ajuda{
+    color:#fff;
+}
+
+body.dark .btn-visualizar,
+body.dark .cta-recursos .btn-principal,
+body.dark .cta-eventos .btn-principal{
+    background:#0E2248;
+    color:#fff;
+}
+
+/* ===========================
+   TABELAS E PAINEL DE INSCRITOS
+=========================== */
+
+body.dark thead{
+    background:#0E2248;
+}
+
+body.dark tbody tr:hover{
+    background:#2B241D;
+}
+
+body.dark .confirmado{
+    background:#173D28;
+    color:#62D990;
+}
+
+body.dark .pendente{
+    background:#45370F;
+    color:#F0C44E;
+}
+
+body.dark .cancelado{
+    background:#492020;
+    color:#FF8888;
+}
+
+/* ===========================
+   TOAST E VALIDAÇÕES
+=========================== */
+
+body.dark .toast{
+    background:#222;
+    color:var(--texto);
+}
+
+body.dark .mensagem-erro{
+    color:#FF7D72;
+}
+
+body.dark .grupo.erro input,
+body.dark .grupo.erro select,
+body.dark .grupo.erro textarea,
+body.dark .campo.erro input,
+body.dark .campo.erro textarea{
+    border-color:#FF6B6B;
+    box-shadow:0 0 0 5px rgba(255,107,107,.14);
+}
+
+body.dark .grupo.sucesso input,
+body.dark .grupo.sucesso select,
+body.dark .grupo.sucesso textarea,
+body.dark .campo.sucesso input,
+body.dark .campo.sucesso textarea{
+    border-color:#2ECC71;
+    box-shadow:0 0 0 5px rgba(46,204,113,.14);
+}
+
+/* ===========================
+   CONFIGURAÇÕES, LOADER E BOTÕES FIXOS
+=========================== */
+
+body.dark #loader{
+    background:var(--bg);
+}
+
+body.dark .loader-barra{
+    background:#333;
+}
+
+body.dark .painel-topo button,
+body.dark .fechar,
+body.dark .fechar-modal{
+    color:#BDBDBD;
+}
+
+body.dark .slider{
+    background:#444;
+}
+
+body.dark .switch input:checked + .slider{
+    background:var(--laranja);
+}
+
+body.dark .btn-config{
+    background:var(--laranja);
+}
+
+body.dark .btn-config:hover{
+    background:#0E2248;
+}
+
+/* ===========================
+   BANNERS ESCUROS COM TEXTO BRANCO
+=========================== */
+
+body.dark .banner-recursos h1,
+body.dark .banner-recursos p,
+body.dark .banner-eventos h1,
+body.dark .banner-eventos p,
+body.dark .banner-contato h1,
+body.dark .banner-contato p,
+body.dark .cta h2,
+body.dark .cta p,
+body.dark .cta-recursos h2,
+body.dark .cta-recursos p,
+body.dark .cta-eventos h2,
+body.dark .cta-eventos p,
+body.dark .numeros p,
+body.dark .numero,
+body.dark .informacoes,
+body.dark .informacoes h2,
+body.dark .info h4,
+body.dark .info p,
+body.dark .card-info,
+body.dark .card-info h3,
+body.dark .card-info li,
+body.dark .card-info p,
+body.dark .card-info h4{
+    color:#fff;
+}
+
+body.dark .informacoes,
+body.dark .card-info{
+    background:#0E2248;
+}
+
+/* ===========================
+   PÁGINA 404
+=========================== */
+
+body.dark .erro404 p{
+    color:var(--texto2);
+}
+
+
+/* ===========================
+   POLIMENTO DO TEMA ESCURO
+=========================== */
+
+body.dark header{
+    background:rgba(18,18,18,.88);
+}
+
+body.dark .admin-acesso{
+    color:#b8b8b8;
+}
+
+body.dark .admin-acesso:hover{
+    color:var(--laranja);
+}
+
+/* Ícones dentro de fundos laranja/azuis precisam ficar claros no tema escuro. */
+body.dark .btn-principal i,
+body.dark .btn-menu i,
+body.dark .btn-evento i,
+body.dark .btn-login i,
+body.dark .btn-salvar-evento i,
+body.dark .novo-evento i,
+body.dark .btn-sair-admin i,
+body.dark .btn-ajuda i,
+body.dark .info i,
+body.dark .redes a i,
+body.dark .passo span,
+body.dark .step span,
+body.dark .erro404 span,
+body.dark .banner-eventos > .container > span,
+body.dark .banner-contato > .container > span,
+body.dark .banner-recursos > .container > span,
+body.dark .banner-sobre span,
+body.dark .status.confirmado,
+body.dark .status.pendente,
+body.dark .status.cancelado{
+    color:#fff;
+}
+
+body.dark .icone,
+body.dark .icone i,
+body.dark .icone-evento,
+body.dark .icone-evento i,
+body.dark .avatar,
+body.dark .avatar i,
+body.dark .feature .icon,
+body.dark .feature .icon i{
+    background:#33271D;
+    color:#F58220;
+}
+
+body.dark .detalhes span{
+    background:#292929;
+    border:1px solid var(--borda);
+    border-radius:14px;
+    padding:10px 14px;
+}
+
+body.dark .detalhes i{
+    color:#F58220;
+}
+
+body.dark .categoria,
+body.dark .tag,
+body.dark .painel-hero .tag,
+body.dark .login-tag{
+    color:#F58220;
+    background:#33271D;
+}
+
+body.dark .login-card,
+body.dark .login-dados{
+    background:var(--card);
+    color:var(--texto);
+    border-color:var(--borda);
+}
+
+body.dark .login-page{
+    background:linear-gradient(135deg,var(--bg),var(--bg2));
+}
+
+body.dark .login-dados p,
+body.dark .login-card > p{
+    color:var(--texto2);
+}
+
+@media(max-width:900px){
+    body.dark header{
+        background:rgba(18,18,18,.95);
+    }
+}
+
+body.dark .formulario button i,
+body.dark .btn-topo i,
+body.dark .btn-config i,
+body.dark .fechar-evento i,
+body.dark .fechar-modal i,
+body.dark .fechar i{
+    color:inherit;
+}
+
+body.dark .btn-topo i,
+body.dark .btn-config i,
+body.dark .formulario button i{
+    color:#fff;
+}

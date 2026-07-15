@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Inscrição | BatataCore</title>
+<link href="../css/index.css" rel="stylesheet"/>
+<link href="../css/formulario.css" rel="stylesheet"/>
+<link href="../css/tema.css" rel="stylesheet"/>
+<link href="../img/favicon.ico" rel="icon"/>
+<!-- PNGs -->
+<link href="../img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../img/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<!-- Apple -->
+<link href="../img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<!-- Android -->
+<link href="../manifest.webmanifest" rel="manifest"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+<link href="../css/modern.css" rel="stylesheet"/><meta content="#f58220" name="theme-color"/><meta content="BatataCore: encontre eventos, faça inscrições e acompanhe sua participação." name="description"/></head>
+<body>
+<!-- LOADER -->
+<div id="loader">
+<div class="loader-conteudo">
+<img alt="BatataCore" src="../img/batatalogo2.png"/>
+<h2>BatataCore</h2>
+<p>Sistema para Inscrição de Eventos</p>
+<div class="loader-barra">
+<span></span>
+</div>
+<small>Carregando...</small>
+</div>
+</div>
+<!-- HEADER -->
+<header>
+<div class="container">
+<a class="logo-home img" href="../index.html">
+<img alt="BatataCore" src="../img/batataescrita.png"/>
+</a>
+<nav>
+<ul>
+<li><a href="../index.html">Início</a></li>
+<li><a href="sobre.html">Sobre</a></li>
+<li><a href="recursos.html">Recursos</a></li>
+<li><a href="eventos.html">Eventos</a></li>
+<li><a href="contato.html">Contato</a></li>
+</ul>
+</nav>
+<a class="btn-menu" href="formulario.html">
+<i class="bi bi-ticket-perforated"></i>
+
+                Fazer Inscrição
+
+            </a>
+</div>
+</header>
+<!-- HERO -->
+<section class="hero-formulario">
+<div class="container hero-grid">
+<div class="hero-texto">
+<span class="tag">
+                    INSCRIÇÕES ABERTAS
+                </span>
+<h1>
+
+                    Faça sua
+
+                    <span>inscrição</span>
+
+                    para o próximo
+
+                    <span>evento.</span>
+</h1>
+<p>
+
+                    Preencha o formulário abaixo e garanta sua participação
+                    nos eventos organizados pelo BatataCore.
+
+                </p>
+<a class="btn-principal" href="#formulario">
+<i class="bi bi-arrow-down-circle"></i>
+
+                    Quero Participar
+
+                </a>
+</div>
+<div class="hero-imagem">
+<img alt="BatataCore" src="../img/batatalogo2.png"/>
+</div>
+</div>
+</section>
+<!-- FORMULÁRIO -->
+<section class="formulario" id="formulario">
+<div class="container formulario-grid">
+<div class="card-formulario">
+<h2>Formulário de Inscrição</h2>
+<p>
+
+                    Todos os campos são obrigatórios.
+
+                </p>
+<form id="formEvento">
+<div class="grupo">
+<label>Nome Completo</label>
+<input id="nome" type="text"/>
+</div>
+<div class="grupo">
+<label>E-mail</label>
+<input id="email" type="email"/>
+</div>
+<div class="grupo">
+<label>Telefone</label>
+<input id="telefone" type="tel"/>
+</div>
+<div class="grupo">
+<label>Cidade</label>
+<input id="cidade" type="text"/>
+</div>
+<div class="grupo">
+<label>Evento</label>
+<select id="evento">
+<option>Hackathon BatataCode</option>
+<option>Workshop Front-end</option>
+<option>Desenvolvimento Web Summit</option>
+<option>Palestra sobre Inteligência Artificial</option>
+</select>
+</div>
+<div class="grupo">
+<label>Tipo de inscrição</label>
+<select id="tipo">
+<option>Participante</option>
+<option>Palestrante</option>
+<option>Visitante</option>
+<option>Organizador</option>
+</select>
+</div>
+<div class="grupo">
+<label>Observações</label>
+<textarea id="observacao"></textarea>
+</div>
+<button class="btn-principal" type="submit">
+<i class="bi bi-check-circle"></i>
+
+                        Confirmar Inscrição
+
+                    </button>
+</form>
+</div>
+<aside class="card-info">
+<h3>O que você recebe?</h3>
+<ul>
+<li><i class="bi bi-check-circle-fill"></i> Confirmação por e-mail</li>
+<li><i class="bi bi-check-circle-fill"></i> Participação garantida</li>
+<li><i class="bi bi-check-circle-fill"></i> Certificado quando disponível</li>
+<li><i class="bi bi-check-circle-fill"></i> Atualizações do evento</li>
+<li><i class="bi bi-check-circle-fill"></i> Dados protegidos</li>
+</ul>
+<div class="eventos-disponiveis">
+<h4>Eventos Disponíveis</h4>
+<p>🥔 Hackathon BatataCode</p>
+<p>🥔 Workshop Front-end</p>
+<p>🥔 Desenvolvimento Web Summit</p>
+<p>🥔 IA Experience</p>
+</div>
+</aside>
+</div>
+</section>
+<!-- COMO FUNCIONA -->
+<section class="como-funciona">
+<div class="container">
+<h2>Como funciona?</h2>
+<div class="passos">
+<div class="passo">
+<span>01</span>
+<h3>Escolha um evento</h3>
+</div>
+<div class="passo">
+<span>02</span>
+<h3>Preencha seus dados</h3>
+</div>
+<div class="passo">
+<span>03</span>
+<h3>Confirme sua inscrição</h3>
+</div>
+<div class="passo">
+<span>04</span>
+<h3>Receba a confirmação</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<section class="faq">
+<div class="container">
+<h2>Perguntas Frequentes</h2>
+<div class="faq-item">
+<button class="faq-pergunta">
+
+                Posso cancelar minha inscrição?
+
+                <i class="bi bi-plus-lg"></i>
+</button>
+<div class="faq-resposta">
+<p>
+                    Sim. Caso não possa participar, basta entrar em contato com nossa equipe pelo formulário de contato.
+                </p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-pergunta">
+
+                Receberei certificado?
+
+                <i class="bi bi-plus-lg"></i>
+</button>
+<div class="faq-resposta">
+<p>
+                    Alguns eventos oferecem certificado de participação. Consulte a descrição do evento escolhido.
+                </p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-pergunta">
+
+                O evento é gratuito?
+
+                <i class="bi bi-plus-lg"></i>
+</button>
+<div class="faq-resposta">
+<p>
+                    Existem eventos gratuitos e pagos. Essa informação estará disponível antes da confirmação da inscrição.
+                </p>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-pergunta">
+
+                Posso alterar meus dados depois?
+
+                <i class="bi bi-plus-lg"></i>
+</button>
+<div class="faq-resposta">
+<p>
+                    Sim. Entre em contato com nossa equipe para solicitar qualquer alteração em sua inscrição.
+                </p>
+</div>
+</div>
+</div>
+</section>
+<!-- FOOTER -->
+<footer>
+<img alt="BatataCore" src="../img/batataescrita.png"/>
+<p>
+
+            © 2026 BatataCore • Sistema de Inscrição para Eventos.
+
+        </p>
+<a aria-label="Acesso administrativo" class="admin-acesso" href="login.html">
+<i class="bi bi-shield-lock"></i>
+            Acesso administrativo
+        </a>
+<div class="footer-legal-links"><a href="privacidade.html">Privacidade</a><a href="termos.html">Termos de uso</a></div></footer>
+<!-- Configurações -->
+<button class="btn-config" id="abrirConfig">
+<i class="bi bi-gear-fill"></i>
+</button>
+<div class="painel-config" id="painelConfig">
+<div class="painel-topo">
+<h3>
+<i class="bi bi-gear-fill"></i>
+
+            Configurações
+
+        </h3>
+<button id="fecharConfig">
+<i class="bi bi-x-lg"></i>
+</button>
+</div>
+<div class="opcao-config">
+<span>
+<i class="bi bi-moon-stars-fill"></i>
+
+            Tema Escuro
+
+        </span>
+<label class="switch">
+<input id="tema" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+<div class="opcao-config desabilitada">
+<span>
+<i class="bi bi-volume-up-fill"></i>
+
+            Sons
+
+        </span>
+<small>Em breve</small>
+</div>
+<div class="opcao-config desabilitada">
+<span>
+<i class="bi bi-stars"></i>
+
+            Animações
+
+        </span>
+<small>Em breve</small>
+</div>
+<div class="opcao-config desabilitada">
+<span>
+<i class="bi bi-type"></i>
+
+            Fonte
+
+        </span>
+<small>Em breve</small>
+</div>
+</div>
+<!-- Assistente BatataCore -->
+<div class="assistente" id="assistente">
+<div class="assistente-box">
+<button class="fechar" id="fecharAssistente">
+<i class="bi bi-x-lg"></i>
+</button>
+<h3 id="tituloAssistente">👋 Olá!</h3>
+<p id="textoAssistente"></p>
+<a class="btn-ajuda" href="contato.html">
+            Entrar em contato
+        </a>
+</div>
+<img alt="BatataCore" class="mascote" id="mascoteAssistente" src="../img/batata-assistente.png"/>
+</div>
+<!-- BOTÃO VOLTAR AO TOPO -->
+<button class="btn-topo" id="btnTopo">
+<i class="bi bi-arrow-up"></i>
+</button>
+<!-- Toast -->
+<div class="toast" id="toast">
+<i class="bi" id="toastIcon"></i>
+<span id="toastMensagem"></span>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.6"></script>
+<script src="../js/supabase.js"></script><script src="../js/app.js"></script>
+<script src="../js/assistente.js"></script>
+<script src="../js/toast.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script><script src="../js/formulario.js"></script>
+<script src="../js/loader.js"></script>
+<script src="../js/topo.js"></script>
+<script src="../js/config.js"></script>
+</body>
+</html>

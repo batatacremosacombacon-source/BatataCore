@@ -1,0 +1,296 @@
+/* ===========================
+   LOGIN ADMINISTRATIVO
+=========================== */
+
+.login-page{
+    min-height:100vh;
+    background:linear-gradient(135deg,#FFF9F1 0%,#FFF1DF 100%);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+    position:relative;
+    overflow:hidden;
+}
+
+.login-page::before{
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    background:rgba(245,130,32,.16);
+    border-radius:50%;
+    top:-160px;
+    left:-120px;
+}
+
+.login-page::after{
+    content:"";
+    position:absolute;
+    width:360px;
+    height:360px;
+    background:rgba(18,50,107,.12);
+    border-radius:50%;
+    bottom:-130px;
+    right:-100px;
+}
+
+.login-card{
+    width:100%;
+    max-width:480px;
+    background:#fff;
+    padding:45px;
+    border-radius:30px;
+    box-shadow:0 25px 70px rgba(0,0,0,.12);
+    position:relative;
+    z-index:2;
+    text-align:center;
+}
+
+.login-logo img{
+    width:190px;
+    margin-bottom:25px;
+}
+
+.login-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:#FFF0DC;
+    color:#F58220;
+    padding:9px 18px;
+    border-radius:40px;
+    font-weight:700;
+    font-size:14px;
+    margin-bottom:22px;
+}
+
+.login-card h1{
+    color:#12326B;
+    font-size:36px;
+    margin-bottom:14px;
+}
+
+.login-card>p{
+    color:#666;
+    line-height:28px;
+    margin-bottom:35px;
+}
+
+.login-card form{
+    text-align:left;
+}
+
+.grupo{
+    margin-bottom:22px;
+}
+
+.grupo label{
+    display:block;
+    color:#12326B;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.input-icon{
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+
+.input-icon>i{
+    position:absolute;
+    left:18px;
+    color:#F58220;
+    font-size:18px;
+}
+
+.input-icon input{
+    width:100%;
+    padding:18px 55px;
+    border:2px solid #E8E8E8;
+    border-radius:16px;
+    font-size:16px;
+    font-family:'Poppins',sans-serif;
+    outline:none;
+    transition:.3s;
+}
+
+.input-icon input:focus{
+    border-color:#F58220;
+    box-shadow:0 0 0 5px rgba(245,130,32,.14);
+}
+
+#verSenha{
+    position:absolute;
+    right:14px;
+    border:none;
+    background:none;
+    color:#777;
+    font-size:20px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#verSenha:hover{
+    color:#F58220;
+}
+
+.btn-login{
+    width:100%;
+    border:none;
+    background:#F58220;
+    color:#fff;
+    padding:18px;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:800;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    transition:.35s;
+    margin-top:10px;
+}
+
+.btn-login:hover{
+    background:#dd720d;
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(245,130,32,.35);
+}
+
+.login-dados{
+    margin-top:28px;
+    background:#FFF9F1;
+    padding:18px;
+    border-radius:18px;
+    text-align:center;
+    border:1px dashed #F58220;
+}
+
+.login-dados strong{
+    color:#12326B;
+    display:block;
+    margin-bottom:10px;
+}
+
+.login-dados p{
+    color:#666;
+    margin:4px 0;
+    font-size:14px;
+}
+
+.voltar-home{
+    margin-top:28px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    text-decoration:none;
+    color:#12326B;
+    font-weight:700;
+    transition:.3s;
+}
+
+.voltar-home:hover{
+    color:#F58220;
+}
+
+/* ===========================
+   VALIDAÇÃO
+=========================== */
+
+.grupo.erro input{
+    border-color:#E74C3C;
+    box-shadow:0 0 0 5px rgba(231,76,60,.12);
+}
+
+.mensagem-erro{
+    display:block;
+    margin-top:8px;
+    color:#E74C3C;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* ===========================
+   TOAST
+=========================== */
+
+.toast{
+    position:fixed;
+    top:30px;
+    right:30px;
+    background:#fff;
+    color:#12326B;
+    padding:18px 24px;
+    border-radius:14px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    box-shadow:0 20px 50px rgba(0,0,0,.18);
+    transform:translateX(420px);
+    transition:.45s;
+    z-index:999999;
+    min-width:320px;
+}
+
+.toast.ativo{
+    transform:translateX(0);
+}
+
+.toast i{
+    font-size:28px;
+}
+
+.toast.sucesso{
+    border-left:6px solid #2ECC71;
+}
+
+.toast.sucesso i{
+    color:#2ECC71;
+}
+
+.toast.erro{
+    border-left:6px solid #E74C3C;
+}
+
+.toast.erro i{
+    color:#E74C3C;
+}
+
+.toast.aviso{
+    border-left:6px solid #F39C12;
+}
+
+.toast.aviso i{
+    color:#F39C12;
+}
+
+.toast.info{
+    border-left:6px solid #3498DB;
+}
+
+.toast.info i{
+    color:#3498DB;
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media(max-width:600px){
+
+    .login-card{
+        padding:32px 24px;
+    }
+
+    .login-card h1{
+        font-size:30px;
+    }
+
+    .login-logo img{
+        width:160px;
+    }
+
+}

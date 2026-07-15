@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<!-- Favicon -->
+<link href="../img/favicon.ico" rel="icon" type="image/x-icon"/>
+<!-- PNGs -->
+<link href="../img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../img/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<!-- Apple -->
+<link href="../img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<!-- Android -->
+<link href="../manifest.webmanifest" rel="manifest"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eventos | BatataCore</title>
+<link href="../css/index.css" rel="stylesheet"/>
+<link href="../css/eventos.css" rel="stylesheet"/>
+<link href="../css/tema.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+<link href="../css/modern.css" rel="stylesheet"/><meta content="#f58220" name="theme-color"/><meta content="BatataCore: encontre eventos, faça inscrições e acompanhe sua participação." name="description"/></head>
+<body>
+<!-- LOADER -->
+<div id="loader">
+<div class="loader-conteudo">
+<img alt="BatataCore" src="../img/batatalogo2.png"/>
+<h2>BatataCore</h2>
+<p>Sistema para Inscrição de Eventos</p>
+<div class="loader-barra">
+<span></span>
+</div>
+<small>Carregando...</small>
+</div>
+</div>
+<header>
+<div class="container">
+<div class="logo">
+<a href="../index.html">
+<img alt="BatataCore" src="../img/batatalogo2.png"/>
+</a>
+</div>
+<nav>
+<ul>
+<li><a href="../index.html">Início</a></li>
+<li><a href="sobre.html">Sobre</a></li>
+<li><a href="recursos.html">Recursos</a></li>
+<li><a class="ativo" href="eventos.html">Eventos</a></li>
+<li><a href="contato.html">Contato</a></li>
+</ul>
+</nav>
+<a class="btn-menu" href="formulario.html">
+<i class="bi bi-ticket-perforated"></i>
+
+Fazer Inscrição
+
+</a>
+</div>
+</header>
+<main>
+<section class="banner-eventos">
+<div class="container">
+<div class="pesquisa-eventos">
+<i class="bi bi-search"></i>
+<input id="pesquisaEvento" placeholder="Pesquisar evento..." type="text"/>
+</div>
+<span>Próximos Eventos</span>
+<h1>Escolha o evento ideal para você.</h1>
+<p>
+
+Confira nossa programação e participe de experiências incríveis.
+
+</p>
+</div>
+</section>
+<section class="lista-eventos">
+<div class="container">
+<div class="evento-card">
+<img alt="Workshop" src="../img/desenvolvimentoweb.png"/>
+<div class="evento-info">
+<span class="categoria">Workshop</span>
+<h3>Workshop de Desenvolvimento Web</h3>
+<p>
+
+Aprenda HTML, CSS e JavaScript desenvolvendo projetos práticos.
+
+</p>
+<div class="detalhes">
+<span><i class="bi bi-calendar-event"></i> 15 Ago 2026</span>
+<span><i class="bi bi-geo-alt"></i> Online</span>
+</div>
+<a class="btn-evento" href="formulario.html">
+
+Inscrever-se
+
+</a>
+</div>
+</div>
+<div class="evento-card">
+<img alt="Palestra" src="../img/palestra.png"/>
+<div class="evento-info">
+<span class="categoria">Palestra</span>
+<h3>Tecnologias do Futuro</h3>
+<p>
+
+Especialistas apresentam tendências em IA, Cloud e Desenvolvimento.
+
+</p>
+<div class="detalhes">
+<span><i class="bi bi-calendar-event"></i> 22 Ago 2026</span>
+<span><i class="bi bi-geo-alt"></i> Ipatinga - MG</span>
+</div>
+<a class="btn-evento" href="formulario.html">
+
+Inscrever-se
+
+</a>
+</div>
+</div>
+<div class="evento-card">
+<img alt="Hackathon" src="../img/hackaton.png"/>
+<div class="evento-info">
+<span class="categoria">Hackathon</span>
+<h3>BatataCode Challenge</h3>
+<p>
+
+Monte sua equipe e desenvolva soluções inovadoras durante 24 horas.
+
+</p>
+<div class="detalhes">
+<span><i class="bi bi-calendar-event"></i> 30 Ago 2026</span>
+<span><i class="bi bi-geo-alt"></i> Jacinto - MG</span>
+</div>
+<a class="btn-evento" href="formulario.html">
+
+Inscrever-se
+
+</a>
+</div>
+</div>
+<div class="sem-eventos" id="semEventos">
+<i class="bi bi-search"></i>
+<h3>Nenhum evento encontrado.</h3>
+<p>Tente pesquisar por Workshop, Palestra ou Hackathon.</p>
+</div>
+</div>
+</section>
+<section class="numeros">
+<div class="container">
+<div class="numero">
+<h2>25+</h2>
+<p>Eventos realizados</p>
+</div>
+<div class="numero">
+<h2>4.500+</h2>
+<p>Participantes</p>
+</div>
+<div class="numero">
+<h2>98%</h2>
+<p>Satisfação</p>
+</div>
+<div class="numero">
+<h2>100%</h2>
+<p>Online e Seguro</p>
+</div>
+</div>
+</section>
+<section class="cta-eventos">
+<div class="container">
+<h2>Garanta sua vaga agora.</h2>
+<p>
+
+As vagas são limitadas para cada evento.
+
+</p>
+<a class="btn-principal" href="formulario.html">
+<i class="bi bi-ticket-perforated"></i>
+
+Fazer Inscrição
+
+</a>
+</div>
+</section>
+</main>
+<footer>
+<div class="container">
+<img alt="BatataCore" src="../img/batatalogoescrita.png"/>
+<p>
+
+          © 2026 BatataCore • Sistema de Inscrições para Eventos.
+
+        </p>
+</div>
+<a aria-label="Acesso administrativo" class="admin-acesso" href="login.html">
+<i class="bi bi-shield-lock"></i>
+            Acesso administrativo
+        </a>
+<div class="footer-legal-links"><a href="privacidade.html">Privacidade</a><a href="termos.html">Termos de uso</a></div></footer>
+<!-- Configurações -->
+<button class="btn-config" id="abrirConfig">
+<i class="bi bi-gear-fill"></i>
+</button>
+<div class="painel-config" id="painelConfig">
+<div class="painel-topo">
+<h3>
+<i class="bi bi-gear-fill"></i>
+
+            Configurações
+
+        </h3>
+<button id="fecharConfig">
+<i class="bi bi-x-lg"></i>
+</button>
+</div>
+<div class="opcao-config">
+<span>
+<i class="bi bi-moon-stars-fill"></i>
+
+            Tema Escuro
+
+        </span>
+<label class="switch">
+<input id="tema" type="checkbox"/>
+<span class="slider"></span>
+</label>
+</div>
+<div class="opcao-config desabilitada">
+<span>
+<i class="bi bi-volume-up-fill"></i>
+
+            Sons
+
+        </span>
+<small>Em breve</small>
+</div>
+<div class="opcao-config desabilitada">
+<span>
+<i class="bi bi-stars"></i>
+
+            Animações
+
+        </span>
+<small>Em breve</small>
+</div>
+<div class="opcao-config desabilitada">
+<span>
+<i class="bi bi-type"></i>
+
+            Fonte
+
+        </span>
+<small>Em breve</small>
+</div>
+</div>
+<!-- Assistente BatataCore -->
+<div class="assistente" id="assistente">
+<div class="assistente-box">
+<button class="fechar" id="fecharAssistente">
+<i class="bi bi-x-lg"></i>
+</button>
+<h3 id="tituloAssistente">👋 Olá!</h3>
+<p id="textoAssistente"></p>
+<a class="btn-ajuda" href="contato.html">
+            Entrar em contato
+        </a>
+</div>
+<img alt="BatataCore" class="mascote" id="mascoteAssistente" src="../img/batata-assistente.png"/>
+</div>
+<!-- BOTÃO VOLTAR AO TOPO -->
+<button class="btn-topo" id="btnTopo">
+<i class="bi bi-arrow-up"></i>
+</button>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.6"></script>
+<script src="../js/supabase.js"></script><script src="../js/app.js"></script>
+<script src="../js/assistente.js"></script>
+<script src="../js/loader.js"></script>
+<script src="../js/topo.js"></script>
+<script src="../js/eventos.js"></script>
+<script src="../js/config.js"></script>
+</body>
+</html> 

@@ -1,0 +1,848 @@
+/* ===========================
+   HERO
+=========================== */
+
+.hero-formulario{
+
+    padding:180px 0 100px;
+
+    background:linear-gradient(180deg,#FFF9F1 0%,#FFF6EC 100%);
+
+}
+
+.hero-grid{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:70px;
+
+}
+
+.hero-texto{
+
+    flex:1;
+
+}
+
+.tag{
+
+    display:inline-block;
+
+    background:#FFE8CC;
+
+    color:#F58220;
+
+    padding:10px 22px;
+
+    border-radius:40px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+.hero-texto h1{
+
+    font-size:64px;
+
+    line-height:1.1;
+
+    color:#12326B;
+
+    margin-bottom:25px;
+
+}
+
+.hero-texto span{
+
+    color:#F58220;
+
+}
+
+.hero-texto p{
+
+    font-size:20px;
+
+    line-height:34px;
+
+    color:#555;
+
+    margin-bottom:40px;
+
+    max-width:600px;
+
+}
+
+.hero-imagem{
+
+    flex:1;
+
+    text-align:center;
+
+}
+
+.hero-imagem img{
+
+    width:100%;
+
+    max-width:500px;
+
+    animation:flutuar 4s ease-in-out infinite;
+
+}
+
+/* ===========================
+   FORMULÁRIO
+=========================== */
+
+.formulario{
+
+    padding:100px 0;
+
+    background:#FFF9F1;
+
+}
+
+.formulario-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:40px;
+
+    align-items:start;
+
+}
+
+/* CARD */
+
+.card-formulario{
+
+    background:#fff;
+
+    padding:45px;
+
+    border-radius:25px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+}
+
+.card-formulario h2{
+
+    font-size:38px;
+
+    color:#12326B;
+
+    margin-bottom:10px;
+
+}
+
+.card-formulario>p{
+
+    color:#666;
+
+    margin-bottom:35px;
+
+}
+
+/* CAMPOS */
+
+.grupo{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom:25px;
+
+}
+
+.grupo label{
+
+    font-weight:600;
+
+    color:#12326B;
+
+    margin-bottom:10px;
+
+}
+
+.grupo input,
+
+.grupo select,
+
+.grupo textarea{
+
+    width:100%;
+
+    padding:18px 20px;
+
+    border:2px solid #E8E8E8;
+
+    border-radius:15px;
+
+    font-size:16px;
+
+    font-family:'Poppins',sans-serif;
+
+    transition:.3s;
+
+    outline:none;
+
+}
+
+.grupo textarea{
+
+    resize:vertical;
+
+    min-height:140px;
+
+}
+
+.grupo input:focus,
+
+.grupo select:focus,
+
+.grupo textarea:focus{
+
+    border-color:#F58220;
+
+    box-shadow:0 0 0 5px rgba(245,130,32,.15);
+
+}
+
+/* BOTÃO */
+
+.card-formulario .btn-principal{
+
+    width:100%;
+
+    justify-content:center;
+
+    margin-top:15px;
+
+    cursor:pointer;
+
+    border:none;
+
+    font-size:18px;
+
+}
+
+/* ===========================
+   CARD LATERAL
+=========================== */
+
+.card-info{
+
+    background:#12326B;
+
+    color:#fff;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    position:sticky;
+
+    top:130px;
+
+}
+
+.card-info h3{
+
+    font-size:28px;
+
+    margin-bottom:25px;
+
+}
+
+.card-info ul{
+
+    list-style:none;
+
+    margin-bottom:40px;
+
+}
+
+.card-info li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:18px;
+
+    line-height:28px;
+
+}
+
+.card-info li i{
+
+    color:#F58220;
+
+    font-size:18px;
+
+}
+
+.eventos-disponiveis{
+
+    background:rgba(255,255,255,.08);
+
+    padding:25px;
+
+    border-radius:18px;
+
+}
+
+.eventos-disponiveis h4{
+
+    margin-bottom:18px;
+
+    font-size:22px;
+
+}
+
+.eventos-disponiveis p{
+
+    margin-bottom:12px;
+
+    line-height:28px;
+
+}
+
+/* ===========================
+   COMO FUNCIONA
+=========================== */
+
+.como-funciona{
+
+    padding:100px 0;
+
+    background:#ffffff;
+
+}
+
+.como-funciona h2{
+
+    text-align:center;
+
+    color:#12326B;
+
+    font-size:46px;
+
+    margin-bottom:60px;
+
+}
+
+.passos{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.passo{
+
+    background:#FFF9F1;
+
+    border-radius:22px;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    border:2px solid transparent;
+
+}
+
+.passo:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#F58220;
+
+    box-shadow:0 20px 35px rgba(0,0,0,.08);
+
+}
+
+.passo span{
+
+    width:70px;
+
+    height:70px;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:#F58220;
+
+    color:#fff;
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+.passo h3{
+
+    color:#12326B;
+
+    font-size:22px;
+
+    line-height:34px;
+
+}
+
+/* ===========================
+   FAQ
+=========================== */
+
+.faq{
+
+    padding:100px 0;
+
+    background:#FFF9F1;
+
+}
+
+.faq h2{
+
+    text-align:center;
+
+    color:#12326B;
+
+    font-size:46px;
+
+    margin-bottom:60px;
+
+}
+
+.faq-item{
+
+    background:#fff;
+
+    padding:28px 35px;
+
+    border-radius:18px;
+
+    margin-bottom:20px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.05);
+
+    transition:.35s;
+
+}
+
+.faq-item:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.faq-item h3{
+
+    color:#12326B;
+
+    font-size:22px;
+
+    margin-bottom:12px;
+
+}
+
+.faq-item p{
+
+    color:#666;
+
+    line-height:30px;
+
+}
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+
+@media(max-width:1100px){
+
+.hero-grid{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.hero-texto p{
+
+    margin:auto auto 40px;
+
+}
+
+.formulario-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.card-info{
+
+    position:static;
+
+}
+
+.passos{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero-formulario{
+
+    padding:140px 0 70px;
+
+}
+
+.hero-texto h1{
+
+    font-size:42px;
+
+}
+
+.hero-texto p{
+
+    font-size:18px;
+
+    line-height:30px;
+
+}
+
+.hero-imagem img{
+
+    max-width:330px;
+
+}
+
+.card-formulario{
+
+    padding:30px;
+
+}
+
+.card-formulario h2{
+
+    font-size:30px;
+
+}
+
+.card-info{
+
+    padding:30px;
+
+}
+
+.passos{
+
+    grid-template-columns:1fr;
+
+}
+
+.como-funciona h2,
+
+.faq h2{
+
+    font-size:34px;
+
+}
+
+.passo{
+
+    padding:30px 20px;
+
+}
+
+.faq-item{
+
+    padding:25px;
+
+}
+
+}
+
+/* ===========================
+   FAQ INTERATIVO
+=========================== */
+
+.faq-item{
+
+    overflow:hidden;
+
+}
+
+.faq-pergunta{
+
+    width:100%;
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:21px;
+
+    font-weight:600;
+
+    color:#12326B;
+
+}
+
+.faq-pergunta i{
+
+    font-size:22px;
+
+    color:#F58220;
+
+    transition:.35s;
+
+}
+
+.faq-resposta{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .45s ease;
+
+}
+
+.faq-resposta p{
+
+    margin-top:20px;
+
+    color:#666;
+
+    line-height:30px;
+
+}
+
+.faq-item.ativo .faq-resposta{
+
+    max-height:250px;
+
+}
+
+.faq-item.ativo i{
+
+    transform:rotate(45deg);
+
+}
+
+/* ===========================
+   TOAST
+=========================== */
+
+.toast{
+
+    position:fixed;
+
+    top:30px;
+
+    right:30px;
+
+    background:#fff;
+
+    color:#12326B;
+
+    padding:18px 24px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.18);
+
+    transform:translateX(420px);
+
+    transition:.45s;
+
+    z-index:99999;
+
+    min-width:320px;
+
+}
+
+.toast.ativo{
+
+    transform:translateX(0);
+
+}
+
+.toast i{
+
+    font-size:28px;
+
+}
+
+/* ===========================
+   TIPOS DE TOAST
+=========================== */
+
+.toast.sucesso{
+
+    border-left:6px solid #2ECC71;
+
+}
+
+.toast.sucesso i{
+
+    color:#2ECC71;
+
+}
+
+.toast.erro{
+
+    border-left:6px solid #E74C3C;
+
+}
+
+.toast.erro i{
+
+    color:#E74C3C;
+
+}
+
+.toast.aviso{
+
+    border-left:6px solid #F39C12;
+
+}
+
+.toast.aviso i{
+
+    color:#F39C12;
+
+}
+
+.toast.info{
+
+    border-left:6px solid #3498DB;
+
+}
+
+.toast.info i{
+
+    color:#3498DB;
+
+}
+
+/* ===========================
+   ANIMAÇÃO
+=========================== */
+
+@keyframes aparecerToast{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(100px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+@keyframes sumirToast{
+
+    from{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        opacity:0;
+
+        transform:translateX(100px);
+
+    }
+
+}
+
+/* ===========================
+   VALIDAÇÃO DOS CAMPOS
+=========================== */
+
+.grupo.erro input,
+.grupo.erro select,
+.grupo.erro textarea{
+    border-color:#E74C3C;
+    box-shadow:0 0 0 5px rgba(231,76,60,.12);
+}
+
+.grupo.sucesso input,
+.grupo.sucesso select,
+.grupo.sucesso textarea{
+    border-color:#2ECC71;
+    box-shadow:0 0 0 5px rgba(46,204,113,.12);
+}
+
+.mensagem-erro{
+    margin-top:8px;
+    color:#E74C3C;
+    font-size:14px;
+    font-weight:600;
+}

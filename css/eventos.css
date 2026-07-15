@@ -1,0 +1,460 @@
+/* ==========================================
+   BANNER EVENTOS
+========================================== */
+
+.banner-eventos{
+    padding:180px 0 110px;
+    background:linear-gradient(135deg,#12326B,#214C9B);
+    text-align:center;
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+}
+
+.banner-eventos::before{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    top:-180px;
+    left:-150px;
+}
+
+.banner-eventos::after{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    background:rgba(245,130,32,.18);
+    bottom:-120px;
+    right:-80px;
+}
+
+.banner-eventos span{
+    display:inline-block;
+    background:#F58220;
+    padding:8px 22px;
+    border-radius:30px;
+    font-size:15px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.banner-eventos h1{
+    font-size:58px;
+    margin-bottom:20px;
+}
+
+.banner-eventos p{
+    max-width:700px;
+    margin:auto;
+    font-size:20px;
+    line-height:34px;
+    color:#ECECEC;
+}
+
+/* ==========================================
+   EVENTOS
+========================================== */
+
+.lista-eventos{
+    background:#FFF9F1;
+    padding:100px 0;
+}
+
+.lista-eventos .container{
+    display:grid;
+    gap:45px;
+}
+
+.evento-card{
+    display:grid;
+    grid-template-columns:380px 1fr;
+    background:#fff;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.evento-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+}
+
+.evento-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.evento-info{
+    padding:40px;
+}
+
+.categoria{
+    display:inline-block;
+    background:#FFF1E3;
+    color:#F58220;
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.evento-info h3{
+    color:#12326B;
+    font-size:34px;
+    margin-bottom:18px;
+}
+
+.evento-info p{
+    color:#666;
+    font-size:17px;
+    line-height:30px;
+    margin-bottom:30px;
+}
+
+.detalhes{
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
+    margin-bottom:35px;
+}
+
+.detalhes span{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:#555;
+    font-weight:500;
+}
+
+.detalhes i{
+    color:#F58220;
+    font-size:20px;
+}
+
+.btn-evento{
+    display:inline-block;
+    background:#F58220;
+    color:#fff;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:40px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-evento:hover{
+    background:#dd720d;
+    transform:translateY(-3px);
+}
+
+/* ==========================================
+   ESTATÍSTICAS
+========================================== */
+
+.numeros{
+    padding:90px 0;
+    background:#12326B;
+}
+
+.numeros .container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.numero{
+    text-align:center;
+    color:#fff;
+}
+
+.numero h2{
+    font-size:52px;
+    color:#F58220;
+    margin-bottom:15px;
+}
+
+.numero p{
+    font-size:19px;
+}
+
+/* ==========================================
+   CTA
+========================================== */
+
+.cta-eventos{
+    background:linear-gradient(135deg,#F58220,#FFAE3D);
+    text-align:center;
+    padding:100px 0;
+    color:#fff;
+}
+
+.cta-eventos h2{
+    font-size:46px;
+    margin-bottom:20px;
+}
+
+.cta-eventos p{
+    font-size:20px;
+    margin-bottom:40px;
+}
+
+.cta-eventos .btn-principal{
+    display:inline-flex;
+    background:#12326B;
+}
+
+.cta-eventos .btn-principal:hover{
+    background:#0B255A;
+}
+
+/* ==========================================
+   RESPONSIVO
+========================================== */
+
+@media(max-width:1100px){
+
+.evento-card{
+    grid-template-columns:1fr;
+}
+
+.evento-card img{
+    height:300px;
+}
+
+.numeros .container{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.banner-eventos h1{
+    font-size:44px;
+}
+
+}
+
+@media(max-width:768px){
+
+.banner-eventos{
+    padding:120px 0 80px;
+}
+
+.banner-eventos h1{
+    font-size:34px;
+}
+
+.banner-eventos p{
+    font-size:17px;
+    line-height:30px;
+}
+
+.lista-eventos{
+    padding:70px 0;
+}
+
+.evento-info{
+    padding:30px;
+}
+
+.evento-info h3{
+    font-size:28px;
+}
+
+.detalhes{
+    flex-direction:column;
+    gap:15px;
+}
+
+.numeros{
+    padding:70px 0;
+}
+
+.numeros .container{
+    grid-template-columns:1fr;
+}
+
+.numero h2{
+    font-size:42px;
+}
+
+.cta-eventos{
+    padding:70px 0;
+}
+
+.cta-eventos h2{
+    font-size:34px;
+}
+
+}
+
+/* ===========================
+   PESQUISA
+=========================== */
+
+.pesquisa-eventos{
+
+    width:100%;
+
+    max-width:500px;
+
+    margin:0 auto 50px;
+
+    background:#fff;
+
+    border-radius:50px;
+
+    padding:18px 25px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.pesquisa-eventos:focus-within{
+
+    box-shadow:0 0 0 5px rgba(245,130,32,.15);
+
+}
+
+.pesquisa-eventos i{
+
+    color:#F58220;
+
+    font-size:22px;
+
+}
+
+.pesquisa-eventos input{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    background:none;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:17px;
+
+    color:#12326B;
+
+}
+
+
+
+.pesquisa-eventos{
+
+    position: relative;
+
+    z-index: 9999;
+
+}
+
+/* ===========================
+   BUSCA SEM RESULTADOS
+=========================== */
+
+.sem-eventos{
+    display:none;
+    text-align:center;
+    background:#fff;
+    border-radius:25px;
+    padding:45px 30px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.sem-eventos.ativo{
+    display:block;
+}
+
+.sem-eventos i{
+    font-size:46px;
+    color:#F58220;
+    margin-bottom:18px;
+}
+
+.sem-eventos h3{
+    color:#12326B;
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.sem-eventos p{
+    color:#666;
+}
+
+@media(max-width:520px){
+    .evento-card img{
+        height:220px;
+    }
+
+    .btn-evento{
+        width:100%;
+        text-align:center;
+    }
+}
+
+
+/* ===========================
+   BUSCA SEM RESULTADOS
+=========================== */
+
+.evento-card.escondido{
+    display:none;
+}
+
+.sem-eventos{
+    display:none;
+    text-align:center;
+    background:#fff;
+    padding:50px 30px;
+    border-radius:25px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.sem-eventos.ativo{
+    display:block;
+}
+
+.sem-eventos i{
+    font-size:52px;
+    color:#F58220;
+    margin-bottom:20px;
+}
+
+.sem-eventos h3{
+    color:#12326B;
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.sem-eventos p{
+    color:#666;
+}
+
+body.dark .sem-eventos{
+    background:#1f1f1f;
+}
+
+body.dark .sem-eventos h3{
+    color:#fff;
+}
+
+body.dark .sem-eventos p{
+    color:#cfcfcf;
+}

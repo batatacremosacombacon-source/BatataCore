@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="noindex,nofollow" name="robots"/>
+<meta content="#12326b" name="theme-color"/>
+<title>Minha conta | BatataCore</title>
+<link href="../img/favicon.ico" rel="icon"/>
+<link href="../manifest.webmanifest" rel="manifest"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+<link href="../css/index.css" rel="stylesheet"/><link href="../css/modern.css" rel="stylesheet"/><link href="../css/portal.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="portal-shell" id="conteudo-principal">
+<header class="portal-topbar"><a href="../index.html"><img alt="BatataCore" src="../img/batataescrita.png"/></a><div class="portal-user"><div class="portal-user-avatar" id="portalAvatar">U</div><div><strong id="portalUserName">Usuário</strong><small id="portalUserEmail" style="display:block;color:#657087"></small></div><button class="bc-button ghost small" id="portalLogout"><i class="bi bi-box-arrow-right"></i> Sair</button></div></header>
+<main class="portal-content">
+<div aria-live="polite" class="bc-alert" hidden="" id="portalFeedback" role="status"></div>
+<section class="portal-welcome"><div><span class="bc-eyebrow"><i class="bi bi-person-circle"></i> Área do participante</span><h1>Olá, <span id="portalWelcomeName">participante</span>!</h1><p>Acompanhe suas inscrições, ingressos e certificados.</p></div><div class="bc-button-row"><a class="bc-button" href="eventos.html"><i class="bi bi-calendar-plus"></i> Encontrar eventos</a><a class="bc-button secondary" hidden="" href="inscritos.html" id="adminPanelLink"><i class="bi bi-speedometer2"></i> Painel administrativo</a></div></section>
+<div class="portal-tabs" role="tablist"><button class="ativo" data-portal-tab="inscricoes">Minhas inscrições</button><button data-portal-tab="perfil">Meu perfil</button></div>
+<section data-portal-panel="inscricoes"><div class="portal-list" id="portalLoading"><div class="bc-skeleton"></div><div class="bc-skeleton"></div></div><div class="portal-list" id="portalInscricoes"></div><div class="bc-empty" hidden="" id="portalEmpty"><i class="bi bi-calendar2-x"></i><h2>Você ainda não possui inscrições</h2><p>Explore os eventos publicados e faça sua primeira inscrição.</p><a class="bc-button" href="eventos.html">Ver eventos</a></div></section>
+<section data-portal-panel="perfil" hidden=""><article class="bc-card" style="max-width:720px"><h2>Dados pessoais</h2><p style="color:#657087">Mantenha seus dados atualizados para agilizar novas inscrições.</p><form class="bc-form" id="perfilForm"><div class="bc-field"><label for="perfilNome">Nome completo</label><input id="perfilNome" minlength="3" name="full_name" required=""/></div><div class="bc-grid bc-grid-2"><div class="bc-field"><label for="perfilTelefone">Telefone</label><input id="perfilTelefone" name="phone" type="tel"/></div><div class="bc-field"><label for="perfilCidade">Cidade</label><input id="perfilCidade" name="city"/></div></div><div class="bc-field"><label for="perfilEmail">E-mail</label><input disabled="" id="perfilEmail" type="email"/></div><button class="bc-button" type="submit"><i class="bi bi-check2"></i> Salvar alterações</button></form></article></section>
+</main>
+</div>
+<div aria-hidden="true" class="bc-modal" id="portalTicketModal"><div class="bc-modal-dialog"><div class="bc-modal-header"><h2>Ingresso digital</h2><button class="bc-modal-close" id="portalTicketClose"><i class="bi bi-x-lg"></i></button></div><div class="bc-ticket"><img alt="BatataCore" src="../img/batatalogo2.png" style="width:90px"/><h3 id="portalTicketEvent"></h3><p id="portalTicketHolder"></p><div class="bc-qr" id="portalTicketQr"></div><code class="bc-ticket-code" id="portalTicketCode"></code><div class="bc-button-row"><button class="bc-button" id="portalTicketPrint"><i class="bi bi-printer"></i> Imprimir ingresso</button></div></div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.6"></script><script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script><script src="../js/supabase.js"></script><script src="../js/app.js"></script><script src="../js/minha-conta.js"></script>
+</body>
+</html>

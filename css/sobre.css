@@ -1,0 +1,292 @@
+/* =====================================
+   BANNER DA PÁGINA
+===================================== */
+
+.banner-sobre{
+    padding:180px 0 100px;
+    text-align:center;
+    background:linear-gradient(135deg,#FFF8EE,#FFF2DF);
+    position:relative;
+    overflow:hidden;
+}
+
+.banner-sobre::before{
+    content:"";
+    position:absolute;
+    width:450px;
+    height:450px;
+    background:#F58220;
+    opacity:.08;
+    border-radius:50%;
+    top:-180px;
+    right:-120px;
+}
+
+.banner-sobre::after{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    background:#12326B;
+    opacity:.05;
+    border-radius:50%;
+    bottom:-120px;
+    left:-80px;
+}
+
+.banner-sobre span{
+    color:#F58220;
+    font-size:18px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+.banner-sobre h1{
+    font-size:60px;
+    color:#12326B;
+    margin:20px auto;
+    max-width:850px;
+    line-height:1.15;
+}
+
+.banner-sobre p{
+    max-width:750px;
+    margin:auto;
+    font-size:20px;
+    color:#555;
+    line-height:34px;
+}
+
+/* =====================================
+   HISTÓRIA
+===================================== */
+
+.historia{
+    padding:100px 0;
+}
+
+.historia-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.historia img{
+    width:100%;
+    max-width:520px;
+    display:block;
+    margin:auto;
+}
+
+.historia h2{
+    color:#12326B;
+    font-size:42px;
+    margin-bottom:25px;
+}
+
+.historia p{
+    font-size:18px;
+    line-height:34px;
+    color:#555;
+    margin-bottom:20px;
+}
+
+/* =====================================
+   MISSÃO VISÃO VALORES
+===================================== */
+
+.mvv{
+    background:#FFF7EC;
+    padding:100px 0;
+}
+
+.mvv .container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.box{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.box:hover{
+    transform:translateY(-10px);
+}
+
+.box i{
+    font-size:55px;
+    color:#F58220;
+    margin-bottom:20px;
+}
+
+.box h3{
+    font-size:28px;
+    color:#12326B;
+    margin-bottom:15px;
+}
+
+.box p{
+    color:#666;
+    line-height:30px;
+}
+
+/* =====================================
+   DIFERENCIAIS
+===================================== */
+
+.diferenciais{
+    padding:100px 0;
+}
+
+.diferenciais h2{
+    text-align:center;
+    color:#12326B;
+    font-size:46px;
+    margin-bottom:60px;
+}
+
+.diferenciais .cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.diferenciais .card{
+    display:block;
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.diferenciais .card:hover{
+    transform:translateY(-10px);
+    background:#FFF8EE;
+}
+
+.diferenciais .card i{
+    display:block;
+    font-size:48px;
+    color:#F58220;
+    margin-bottom:20px;
+}
+
+.diferenciais .card h3{
+    color:#12326B;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.diferenciais .card p{
+    color:#666;
+    line-height:28px;
+}
+
+/* =====================================
+   CTA
+===================================== */
+
+.cta{
+    padding:100px 0;
+    background:linear-gradient(135deg,#12326B,#0D2450);
+    text-align:center;
+    color:white;
+}
+
+.cta h2{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.cta p{
+    font-size:20px;
+    margin-bottom:40px;
+    color:#E7EAF2;
+}
+
+.cta .btn-principal{
+    display:inline-flex;
+}
+
+/* =====================================
+   RESPONSIVO
+===================================== */
+
+@media(max-width:1100px){
+
+.historia-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.mvv .container{
+    grid-template-columns:1fr;
+}
+
+.diferenciais .cards{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.banner-sobre h1{
+    font-size:48px;
+}
+
+}
+
+@media(max-width:768px){
+
+.banner-sobre{
+    padding:120px 0 70px;
+}
+
+.banner-sobre h1{
+    font-size:38px;
+}
+
+.banner-sobre p{
+    font-size:17px;
+    line-height:30px;
+}
+
+.historia{
+    padding:70px 0;
+}
+
+.historia h2{
+    font-size:34px;
+}
+
+.mvv,
+.diferenciais,
+.cta{
+    padding:70px 0;
+}
+
+.diferenciais h2,
+.cta h2{
+    font-size:34px;
+}
+
+.diferenciais .cards{
+    grid-template-columns:1fr;
+}
+
+.box{
+    padding:30px;
+}
+
+.diferenciais .card{
+    padding:30px;
+}
+
+}
